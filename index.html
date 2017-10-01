@@ -1,17 +1,22 @@
 <!D0CTYPE html>
 <html lang=en>
+
 <head>
 	<meta charset="UTF-8">
-	<link rel"stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	
 	<title>WEATHER</title>
 </head>
+	
 	<h1>Weather App</h1>
 <body>
- <p>Be sure to look for weather API</p>
-	<span id="error"></span>
-	<input type="text" name="city" name="search" placeholder="City or Zip Code">
-	<button id="submitWeather" class="btn btn primary">Search</button>
+	<div class="containter">
+		<i class="fa fa-sun-o" aria-hidden="true"></i>
+		<p>Be sure to look for weather API</p>
+			<span id="error"></span>
+			<input type="text" name="city" name="search" placeholder="City or Zip Code">
+			<button id="getWeather()" class="btn btn primary">Search</button>
+	</div>
 </body>
 
 <script> src="js/weather.js"</script>

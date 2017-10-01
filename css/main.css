@@ -1,9 +1,18 @@
-h1 {
-	font-size: 50px;
-	margin-top: 150px;
-	text-align: center;
+
+* {
+	font-family: "Lucida Console", Times, serif;
+	text-align: center; 
 }
-.body {
-	font-size: 100px;
+
+body {
+	background-color: lightblue;
+}
+
+div.containter {
+	background-color: lightgrey;
+}
+
+p {
+	font-size: 20px;
 	text-align: center;
 }
