@@ -1,5 +1,9 @@
 h1 {
 	font-size: 50px;
 	margin-top: 150px;
-	margin-left: 70px;
+	text-align: center;
+}
+.body {
+	font-size: 100px;
+	text-align: center;
 }
