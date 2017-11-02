@@ -1,22 +1,27 @@
-if (navigator.geolocation) {
-    //Return the user's longitude and latitude on page load using HTML5 geolocation API
-    window.onload = function() {
-    var currentPosition;
-    function getCurrentLocation (position) {
-        currentPosition = position;
-        latitude = currentPosition.coords.latitude;
-        longitude = currentPosition.coords.longitude;
-        //AJAX request
-        $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&APPID=******************", function (data) {
-            var rawJson = JSON.stringify(data);
-            var json = JSON.parse(rawJson);
-            updateWeather(json); //Update Weather parameters
-        });
-    }
-    navigator.geolocation.getCurrentPosition(getCurrentLocation);
-    };
+var map = document.getElementById('loc');
+var msg = 'Sorry, we were unable to get your location';
 
-// var location = document.getElementById("getWeather");
+if (Mordernizr.geolocation) {
+    //Return the user's longitude and latitude on page load using HTML5 geolocation API
+    navigator.geolocation.getCurrentPosition(success, fail);
+	map.textContent = msg;
+}
+
+function success(position) {
+	msg = '<h3>Longitude:<br>';
+	msg += position.coords.longitude + '</h3>';
+	msg += '<h3>Latitude:<br>';
+	msg += position.coords.latitude + '</h3>';
+	
+	map.innerHTML = msg;
+}
+
+function fail(msg) {
+	map.textContent = msg;
+	console.log(msg.code);
+	
+}
+	// var location = document.getElementById("getWeather");
 
 // function getLocation() {
     // if (navigator.geolocation) {
