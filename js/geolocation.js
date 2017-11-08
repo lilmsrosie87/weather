@@ -25,6 +25,7 @@ function fail(msg) {
 // Note that this example might not work locally in Chrome (it works on a web server).
 // In other browsers, you may get a prompt that allows you to share location data.
 // It may take the browser a while to determine your location (his demonstrates why you should not depend on this information before loading the entire page).
+//below came from book
 
 var elMap = document.getElementById('loc');                 // HTML element
 var msg = 'Sorry, we were unable to get your location.';    // No location msg
