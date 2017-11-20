@@ -1,12 +1,11 @@
 
-function findLocation() {
 // / Previous js that was not working
-function findLocation()
-var map = document.getElementById('loc');
+function findLocation() {
+var map = document.write('loc');
 var msg = 'Sorry, we were unable to get your location';
 
 if (Mordernizr.geolocation) {
-    Return the user's longitude and latitude on page load using HTML5 geolocation API
+    // Return the user's longitude and latitude on page load using HTML5 geolocation API
     navigator.geolocation.getCurrentPosition(success, fail);
 {else}
 	map.textContent = msg;
@@ -19,6 +18,7 @@ function success(position) {
 	msg += position.coords.latitude + '</h3>';
 	
 	map.innerHTML = msg;
+	document.write('map')
 }
 
 function fail(msg) {
@@ -26,3 +26,7 @@ function fail(msg) {
 	console.log(msg.code);
 	
 }
+}
+
+
+
